@@ -132,7 +132,7 @@
         //Product table hygiene: transform/normalize data into presentation format
         for (var i = 0; i < tabledata.length; i++) {
             //randomly set the exptected inventory depletion date to -14d ... +30d from today
-            tabledata[i]["inventoryExpiry"] = tday.addDays(Math.floor(Math.random() * 45) - 14).toISOString().slice(0, 10);
+            tabledata[i]["inventoryExpiry"] = tday.addDays(Math.floor(Math.random() * 46) - 14).toISOString().slice(0, 10);
             //add fields to be displayed in the product table
             d = dateDiffInDays(tday, new Date(tabledata[i]["inventoryExpiry"]));
             t = d >= minDaysGreenInventory ? 2 : (d >= minDaysYellowInventory ? 1 : 0);
