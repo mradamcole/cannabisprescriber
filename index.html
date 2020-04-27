@@ -29,6 +29,10 @@
             color: #114e7e;
             background-color: #e8f8ff;
         }
+
+        ::placeholder {
+            color: #80a0ff80;
+        }
     </style>
 
     <!-- Mock data -->
@@ -109,31 +113,31 @@
 
         var tabledata = [
             { id: 1, name: "Bob Marley Special", lp: "Aurora", strain: "Indica", cbd: "5", thc: "30", format: "dried", rating: "4.5", inventoryExpiry: "2020-01-17", unitPrice: "12.95", units: "g", terepen: "Myrcene" },
-            { id: 2, name: "Purple Kush", lp: "Aurora", strain: "Sativa", cbd: "10", thc: 20, format: "dried", rating: "4.2", inventoryExpiry: "2020-01-28", unitPrice: "11.20", units: "g", terepen: "Caryophyllene" },
-            { id: 3, name: "CBD Drops", lp: "Aurora", strain: "Hyrbrid", cbd: 0.8, thc: "22-30", format: "oil", rating: "4.1", inventoryExpiry: "2020-01-29", unitPrice: "11.20", units: "g", terepen: "Pinene" },
-            { id: 4, name: "Raspberry THC Gummies", lp: "Aurora", strain: "Indica", cbd: 0, thc: 2, format: "edible", rating: "2", inventoryExpiry: "2020-01-26", unitPrice: "11.20", units: "g", terepen: "limonene" },
-            { id: 5, name: "Aurora THC Drops", lp: "Aurora", strain: "Sativa", cbd: 0, thc: 27, format: "oil", rating: "4.2", inventoryExpiry: "2020-02-25", unitPrice: "11.20", units: "g", terepen: "Pinene" },
-            { id: 6, name: "Ambition", lp: "Aurora", strain: "Hybrid", cbd: 1, thc: 1, format: "dried", rating: "4.2", inventoryExpiry: "2020-02-22", unitPrice: "11.20", units: "g", terepen: "Myrcene" },
-            { id: 7, name: "Marley Natural", lp: "Aurora", strain: "Indica", cbd: 40, thc: 40, format: "dried", rating: "4.2", inventoryExpiry: "2020-01-21", unitPrice: "11.20", units: "g", terepen: "Pinene" },
-            { id: 8, name: "Apothecanna", lp: "Aurora", strain: "Indica", cbd: 2, thc: 2, format: "dried", rating: "4.2", inventoryExpiry: "2020-01-22", unitPrice: "11.20", units: "g", terepen: "limonene" },
-            { name: "Caviar Gold", lp: "MM", strain: "Sativa", cbd: 3, thc: 3, format: "dried", rating: "4.2", inventoryExpiry: "2020-01-23", unitPrice: "11.20", units: "g", terepen: "limonene" },
-            { name: "Willie's Reserve", lp: "MM", strain: "Sativa", cbd: 4, thc: 4, format: "dried", rating: "4.2", inventoryExpiry: "2020-01-24", unitPrice: "11.20", units: "g", terepen: "Terpinolene" },
-            { name: "Afghan", lp: "MM", strain: "Hybrid", cbd: 5, thc: 5, format: "dried", rating: "4.2", inventoryExpiry: "2020-02-23", unitPrice: "11.20", units: "g", terepen: "Humulene" },
-            { name: "Funky Monkey", lp: "MM", strain: "Hybrid", cbd: 40, thc: 25, format: "dried", rating: "4.2", inventoryExpiry: "2020-02-24", unitPrice: "11.20", units: "g", terepen: "Linalool" },
-            { name: "Blackwater", lp: "MM", strain: "Hybrid", cbd: 3, thc: 3, format: "oil", rating: "4.2", inventoryExpiry: "2020-01-23", unitPrice: "11.20", units: "g", terepen: "Ocimene" },
-            { name: "Blueberry", lp: "MM", strain: "Hybrid", cbd: 4, thc: 4, format: "capsule", rating: "4.6", inventoryExpiry: "2020-01-25", unitPrice: "11.20", units: "g", terepen: "Nerolidol" },
-            { name: "Dynamite", lp: "MM", strain: "Sativa", cbd: 5, thc: 5, format: "edible", rating: "4.5", inventoryExpiry: "2020-02-26", unitPrice: "11.20", units: "g", terepen: "Linalool" },
-            { name: "Edelweiss", lp: "MM", strain: "Sativa", cbd: 15, thc: 50, format: "oil", rating: "4.0", inventoryExpiry: "2020-02-27", unitPrice: "11.20", units: "g", terepen: "Humulene" },
-            { name: "Kryptonite", lp: "MM", strain: "Indica", cbd: 3, thc: 30, format: "capsule", rating: "4.1", inventoryExpiry: "2020-01-28", unitPrice: "11.20", units: "g", terepen: "Bisabolol" },
-            { name: "Lions Gate", lp: "MM", strain: "Indica", cbd: 40, thc: 4, format: "oil", rating: "4.2", inventoryExpiry: "2020-01-29", unitPrice: "11.20", units: "g", terepen: "Nerolidol" },
-            { name: "Mango", lp: "MM", strain: "Indica", cbd: 5, thc: 15, format: "topical", rating: "4.3", inventoryExpiry: "2020-02-28", unitPrice: "11.20", units: "g", terepen: "Pinene" },
-            { id: 9, name: "Midnight", lp: "MedReleaf", strain: "Sativa", cbd: "8-12", thc: "6-10", format: "dried", rating: "4.1", inventoryExpiry: "2020-02-27", unitPrice: "11.91", units: "g", terepen: "Caryophyllene" },
+            { id: 2, name: "Purple Kush", lp: "Aurora", strain: "Sativa", cbd: "10", thc: 20, format: "edible", rating: "4.2", inventoryExpiry: "2020-01-28", unitPrice: "4.20", units: "bottle", terepen: "Caryophyllene" },
+            { id: 3, name: "CBD Drops", lp: "Aurora", strain: "Hyrbrid", cbd: 0.8, thc: "22-30", format: "oil", rating: "4.1", inventoryExpiry: "2020-01-29", unitPrice: "6.95", units: "g", terepen: "Pinene" },
+            { id: 4, name: "Raspberry THC Gummies", lp: "Aurora", strain: "Indica", cbd: 0, thc: 2, format: "edible", rating: "2", inventoryExpiry: "2020-01-26", unitPrice: "4.20", units: "g", terepen: "limonene" },
+            { id: 5, name: "Aurora THC Drops", lp: "Aurora", strain: "Sativa", cbd: 0, thc: 27, format: "oil", rating: "4.2", inventoryExpiry: "2020-02-25", unitPrice: "4.20", units: "g", terepen: "Pinene" },
+            { id: 6, name: "Ambition", lp: "Aurora", strain: "Hybrid", cbd: 1, thc: 1, format: "dried", rating: "4.2", inventoryExpiry: "2020-02-22", unitPrice: "4.20", units: "g", terepen: "Myrcene" },
+            { id: 7, name: "Marley Natural", lp: "Aurora", strain: "Indica", cbd: 40, thc: 40, format: "dried", rating: "4.2", inventoryExpiry: "2020-01-21", unitPrice: "5.00", units: "g", terepen: "Pinene" },
+            { id: 8, name: "Apothecanna", lp: "Aurora", strain: "Indica", cbd: 2, thc: 2, format: "dried", rating: "4.2", inventoryExpiry: "2020-01-22", unitPrice: "8.88", units: "g", terepen: "limonene" },
+            { id: 9, name: "Caviar Gold", lp: "MM", strain: "Sativa", cbd: 3, thc: 3, format: "dried", rating: "4.2", inventoryExpiry: "2020-01-23", unitPrice: "9.99", units: "g", terepen: "limonene" },
+            { id: 10, name: "Willie's Reserve", lp: "MM", strain: "Sativa", cbd: 4, thc: 4, format: "dried", rating: "4.2", inventoryExpiry: "2020-01-24", unitPrice: "11.20", units: "g", terepen: "Terpinolene" },
+            { id: 11, name: "Afghan", lp: "MM", strain: "Hybrid", cbd: 5, thc: 5, format: "dried", rating: "4.2", inventoryExpiry: "2020-02-23", unitPrice: "11.20", units: "g", terepen: "Humulene" },
+            { id: 12, name: "Funky Monkey", lp: "MM", strain: "Hybrid", cbd: 40, thc: 25, format: "dried", rating: "4.2", inventoryExpiry: "2020-02-24", unitPrice: "5.01", units: "g", terepen: "Linalool" },
+            { id: 13, name: "Blackwater", lp: "MM", strain: "Hybrid", cbd: 3, thc: 3, format: "oil", rating: "4.2", inventoryExpiry: "2020-01-23", unitPrice: "11.20", units: "g", terepen: "Ocimene" },
+            { id: 14, name: "Blueberry", lp: "MM", strain: "Hybrid", cbd: 4, thc: 4, format: "capsule", rating: "4.6", inventoryExpiry: "2020-01-25", unitPrice: "11.20", units: "g", terepen: "Nerolidol" },
+            { id: 15, name: "Dynamite", lp: "MM", strain: "Sativa", cbd: 5, thc: 5, format: "edible", rating: "4.5", inventoryExpiry: "2020-02-26", unitPrice: "14.95", units: "g", terepen: "Linalool" },
+            { id: 16, name: "Edelweiss", lp: "MM", strain: "Sativa", cbd: 15, thc: 50, format: "oil", rating: "4.0", inventoryExpiry: "2020-02-27", unitPrice: "11.20", units: "g", terepen: "Humulene" },
+            { id: 17, name: "Kryptonite", lp: "MM", strain: "Indica", cbd: 3, thc: 30, format: "capsule", rating: "4.1", inventoryExpiry: "2020-01-28", unitPrice: "11.20", units: "g", terepen: "Bisabolol" },
+            { id: 18, name: "Lions Gate", lp: "MM", strain: "Indica", cbd: 40, thc: 4, format: "oil", rating: "4.2", inventoryExpiry: "2020-01-29", unitPrice: "11.20", units: "g", terepen: "Nerolidol" },
+            { id: 19, name: "Mango", lp: "MM", strain: "Indica", cbd: 5, thc: 15, format: "topical", rating: "4.3", inventoryExpiry: "2020-02-28", unitPrice: "11.20", units: "g", terepen: "Pinene" },
+            { id: 20, name: "Midnight", lp: "MedReleaf", strain: "Sativa", cbd: "8-12", thc: "6-10", format: "dried", rating: "4.1", inventoryExpiry: "2020-02-27", unitPrice: "20.00", units: "g", terepen: "Caryophyllene" },
         ];
         //Product table hygiene: transform/normalize data into presentation format
         for (var i = 0; i < tabledata.length; i++) {
             //randomly set the exptected inventory depletion date to -14d ... +30d from today
-            tabledata[i]["inventoryExpiry"] = tday.addDays(Math.floor(Math.random() * 46) - 14).toISOString().slice(0, 10);
-            //add fields to be displayed in the product table
+            tabledata[i]["inventoryExpiry"] = tday.addDays(Math.floor(Math.random() * 45) - 14).toISOString().slice(0, 10);
+            //add fields to be displayed in the product talbe
             d = dateDiffInDays(tday, new Date(tabledata[i]["inventoryExpiry"]));
             t = d >= minDaysGreenInventory ? 2 : (d >= minDaysYellowInventory ? 1 : 0);
             tabledata[i]["inventoryLevel"] = t;
@@ -149,11 +153,12 @@
             tabledata[i]["lpDisplay"] = "<img src='imgs/logo" + tabledata[i]["lp"] + ".png'> " + tabledata[i]["lp"];
         }
 
+        //Fake Product details (repalce with AJAX call)
         var hcProductDetails = {
             "id": 9,
             "imgs": ["medreleaf-midnight.jpg", "medreleaf-midnight2.jpg", "medreleaf-midnight3.jpg", "medreleaf-midnight4.jpg", "medreleaf-midnight5.png"],
-            "orderUnits": "bottle (30gm)",
-            "orderQty": 1,
+            "orderUnits": "bottle (" + (Math.floor(Math.random() * 5) + 1) * 10 + "gm)",
+            "orderQty": Math.floor(Math.random() * 4) + 1,
         }
 
         //Fake reviews for all Products * all conditions
@@ -404,7 +409,7 @@
     </div>
     </div>
 
-    <!-- product list & details -->
+    <!-- product details, Order Hx, Payments -->
     <div id="hc_productListContainer" class="container-fluid fill-height" style="margin-top: 5px; margin-bottom: 0px; margin-left: -10px;">
         <div class="row">
             <div class="col-lg-8" style="padding-right: 0px;">
@@ -420,7 +425,7 @@
                             <a class="nav-link" id="rxhx-tab" data-toggle="tab" href="#rxhx" role="tab" aria-controls="rxhx" aria-selected="false">Rx Hx</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="rxhx-tab" data-toggle="tab" href="#prescribe" role="tab" aria-controls="prescribe" aria-selected="false">Prescription</a>
+                            <a class="nav-link" id="rxhx-tab" data-toggle="tab" href="#prescribe" role="tab" aria-controls="prescribe" aria-selected="false">Rx Payment</a>
                         </li>
                     </ul>
                     <div class="tab-content">
@@ -545,13 +550,13 @@
 
             //Order history
             var s = '<table class="table"><thead class="text-primary">';
-            s += '<th>Product</th><th>Date</th><th class="text-right">Amount</th></thead><tbody>';
+            s += '<th style="font-weight:bold">Product</th><th style="font-weight:bold">Date</th><th class="text-right" style="font-weight:bold">Amount</th></thead><tbody>';
             for (var i = hcData.orderHx.length - 1; i >= 0; i--) {
                 s += '<tr>';
-                s += '<td>' + hcData.orderHx[i].product + '</td>';
-                s += '<td>' + hcData.orderHx[i].orderDate + '</td>';
+                s += '<td style="padding: 4px 6px">' + hcData.orderHx[i].product + '</td>';
+                s += '<td style="padding: 4px 6px">' + hcData.orderHx[i].orderDate + '</td>';
                 // s += '<td>' + hcData.orderHx[i].instructions + '</td>';
-                s += '<td class="text-right">' + hcData.orderHx[i].cost + '</td>';
+                s += '<td class="text-right" style="padding: 4px 6px">' + hcData.orderHx[i].cost + '</td>';
                 s += '</tr>';
             }
             s += '</tbody></table>';
@@ -587,6 +592,17 @@
 
             //Apply initial filters to the Product List table
             setTimeout(() => { filterPL(); }, 200);
+
+            //Flicker problem
+            //**********************************************************************************************************************************
+            //**********************************************************************************************************************************
+            //**********************************************************************************************************************************
+            //Set Browser window to ~ 1111 x 1735 pixels (https://www.whatismybrowser.com/), click Show All (under advanced search)
+            setTimeout(() => {
+                console.log("hi")
+                document.getElementsByClassName("tabulator-tableHolder")[0].style.overflowY = "visible";
+                document.getElementsByClassName("tabulator-tableHolder")[0].style.overflowX = "hidden";
+            }, 1000);
 
             //Display tab Order History
             $('.nav-tabs a[href="#rxhx"]').tab('show');
@@ -657,10 +673,10 @@
             var t = "";
             for (var i = 0; i < tabledata.length; i++) { if (tabledata[i].id == rowID) { t = tabledata[i]; break; } }
             var s = '';
-            //Add to prescription
+            //Row: "Add [#] units to prescription (Add)"
             s += '<div id="hcSelectQty" style="margin-top:10px; margin-bottom:10px; padding:5px; background-color:#dcdcdc; text-align:center;">Add to prescription: ';
             s += '<input type="text" id="hcAddQty" value="' + hcProductDetails.orderQty + '" style="width:40px; text-align:right; padding: 0px 5px;"> ' + hcProductDetails.orderUnits + ' ';
-            s += '<button class="btn btn-default btn-round btn-sm" onclick="addToOrder()">Add</button></div>';
+            s += '<button class="btn btn-default btn-round btn-sm" onclick="addToOrder(' + rowID + ')">Add</button></div>';
             //Image carousel
             s += '<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"><ol class="carousel-indicators">';
             for (var i = 0; i < hcProductDetails.imgs.length; i++) {
@@ -674,8 +690,8 @@
             s += '</div><a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a>';
             s += '<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a></div>';
 
-            //INTERIM DISPLAY...
-            s += "<b>Row ID: </b>" + rowID + "</br>";
+            //INTERIM DISPLAY (show all product attributes)...
+            s += "</br></br><i>Product attributes (to be substituted with client CSS):</i></br><b>Row ID: </b>" + rowID + "</br>";
             for (var key in t) { s += "<b>" + key + ": </b>" + t[key] + "</br>"; }
             //...interim display
             document.getElementById('details').innerHTML = s;
@@ -685,21 +701,71 @@
 
         //When a product has been selected, and then the order quantity has been 'Add'ed, set the Prescription tab as active and add the product + qty to the prescription
         var hcOrderCart = [];
-        function addToOrder(qty) {
+        function addToOrder(prodID, qty) {
+            var t = "";
+            var cartItems = hcOrderCart.length;
+            var amt = 0;
             if (typeof qty == "undefined") { qty = document.getElementById("hcAddQty").value; }
-            var prodID = hcProductDetails.id;
-            // hcOrderCart[0] = prodID;
-            // hcOrderCart[1] = hcProductDetails.name;
-            // hcOrderCart[2] = qty;
-            // hcOrderCart[3] = hcProductDetails.unitPrice;
-            // var s = "<Table><thead><td>Product</td></thead>";
-            //     for (var i=0; i<hcOrderCart.length; i++) {
-            //         s += "<row><td>"+ hcOrderCart[1] + "</td></row>";
-            //     }
-            // s += "</table>";
-            s += "Add [" + qty + "] of ID:" + prodID;
+            for (var i = 0; i < tabledata.length; i++) { if (tabledata[i].id == prodID) { t = tabledata[i]; break; } }
+            hcOrderCart[cartItems] = [];
+            hcOrderCart[cartItems][0] = prodID;
+            hcOrderCart[cartItems][1] = t["name"];
+            hcOrderCart[cartItems][2] = qty;
+            hcOrderCart[cartItems][3] = t["unitPrice"];
+            //Cart table
+            var s = "<Table class='table'><thead class='text-secondary'><td style='font-weight:bold; padding:4px'>Product</td><td style='font-weight:bold; padding:4px'>Qty</td><td class='text-right' style='font-weight:bold; padding:4px'>Unit Price</td></thead><tbody>";
+            for (var i = 0; i < hcOrderCart.length; i++) {
+                s += "<tr><td style='padding:4px 8px'>" + hcOrderCart[i][1] + "</td>";
+                s += "<td style='padding:4px 8px'>" + hcOrderCart[i][2] + "</td>";
+                s += "<td style='padding:4px 8px' class='text-right'>" + hcOrderCart[i][3] + "</td></tr>";
+                amt += hcOrderCart[i][2] * hcOrderCart[i][3];
+            }
+            s += "<td style='padding:4px 8px;font-weight:bold' colspan='2'>Total</td><td id='hcAdjudicateAmt' style='padding:4px 8px;font-weight:bold' class='text-right'>$" + amt.toFixed(2) + "</td></tr>";
+            s += "</tbody></table>";
+            //Primary & Secondary claims card
+            s += '<div id="hcPlanCardPrimary" style="margin-top:10px; margin-bottom:10px; padding:5px; background-color:#dcdcdc; text-align:center; border-radius: 5px">';
+            s += 'Health Plan(s):</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Primary: ';
+            s += '<input type="text" id="hcPlanCardPrimaryGroup" value="" style="width:80px; padding: 0px 5px;" placeholder="Group #">';
+            s += '<input type="text" id="hcPlanCardPrimaryMember" value="" style="width:160px; padding: 0px 5px;" placeholder="Member #">'; //Member a.k.a. Enrollee/ID/Subscriber/Client
+            s += '</br>Secondary: '
+            s += '<input type="text" id="hcPlanCardSecondaryGroup" value="" style="width:80px; padding: 0px 5px;" placeholder="Group #">';
+            s += '<input type="text" id="hcPlanCardSecondaryMember" value="" style="width:160px; padding: 0px 5px;" placeholder="Member #">';
+            //Adjudicate button & adjudicate accordian
+            s += '<div id="hcAdjudicateAccordian" class="card-collapse">';
+            s += '<a data-toggle="collapse" data-parent="#hcAdjudicateAccordian" href="#collapseAdjudicate" aria-expanded="true" aria-controls="collapseAdjudicate">';
+            s += '<button id="hcAdjudicateBtn" class="btn btn-default btn-round btn-sm" onclick="hcAdjudicate()">Adjudicate</button></a>';
+            s += '<div id="collapseAdjudicate" class="collapse">';
+            s += '<div id="hcAdjudicateResponse" class="card-body" style="border: 1px solid #808080; border-radius: 5px; margin-top:10px;">';
+            s += 'Adjudicating...</br><img src="imgs/spinner3.gif" height=27 width=48></br>';
+            s += '</div></div></div>';
+            s += '</div>';
             document.getElementById('prescribe').innerHTML = s;
             $('.nav-tabs a[href="#prescribe"]').tab('show');  //Set the Prescription tab as active
+        }
+        //Adjudicate
+        function hcAdjudicate() {
+            $("#hcPlanCardPrimaryGroup").prop("disabled", true);
+            $("#hcPlanCardPrimaryMember").prop("disabled", true);
+            $("#hcPlanCardSecondaryGroup").prop("disabled", true);
+            $("#hcPlanCardSecondaryMember").prop("disabled", true);
+            $("#hcAdjudicateBtn").prop("disabled", true);
+            setTimeout(function () {
+                //Simulate callback from adjudication
+                var amt = document.getElementById('hcAdjudicateAmt').innerHTML.substr(1) * 1;
+                var deduct = Math.min(76.34, amt);
+                var member = deduct;
+                amt = Math.max(0, amt - deduct);
+                var s = '<div style="text-align:left; font-size:10px; line-height:normal;">Sunlife pays 100% of HSA, $76.34 remaining</br>';
+                s += '&nbsp;&nbsp;&nbsp;$' + deduct.toFixed(2) + ' deducted (reimbursed to member), copay $' + amt.toFixed(2) + '</br>';
+                s += 'Greenshield pays 80%, up to $500/3mos, $500 remaining</br>';
+                deduct = Math.min(500, amt) * .8;
+                amt = Math.max(0, amt - deduct);
+                member += amt;
+                s += '&nbsp;&nbsp;&nbsp;$' + deduct.toFixed(2) + ' deducted (reimbursed to provider), copay $' + amt.toFixed(2) + '</br>';
+                s += 'Member to pay (copay + member reimbursment) $' + member.toFixed(2) + '</br>';
+                s += '<div style="text-align:center;"><button id="hcPaymentProcessor" class="btn btn-default btn-round btn-sm" onclick="alert(\'Payment processor: collect member pays and complete adjudication tx\')">Payment Processor ($<b>' + member.toFixed(2) + ')</b></button></div>';
+                document.getElementById('hcAdjudicateResponse').innerHTML = s;
+            }, 3000);
         }
     </script>
 
