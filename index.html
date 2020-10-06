@@ -228,11 +228,15 @@
         function abc_adjudicateCB(result) {
             result = JSON.parse(result.substr(result.indexOf("{")));
             console.log("Claim response", result)
-            var s = '<div style="text-align:left; font-size:10px; line-height:normal;">Primary carrier '+ claimObj.carrier +' pays 100% of '+ claimObj.billed.toFixed(2) +'</br>';
+            var billed = result.data.BILLD * 1
+            var deducted = result.data.DEDT * 1
+            var copay = result.data.TOTAL * 1
+            var s = '<div style="text-align:left; font-size:10px; line-height:normal;">Primary carrier '+ claimObj.carrier +' pays '+ (billed/claimObj.billed*100);
+            s += '% ($'+ billed.toFixed(2) +') of $'+ claimObj.billed.toFixed(2) +'</br>';
             s += 'Secondary carrier not utilized.</br>';
-            s += '&nbsp;&nbsp;&nbsp;$' + claimObj.billed.toFixed(2) + ' deducted (reimbursed to provider), copay $' + 0 + '</br>';
-            s += 'Member to pay (copay + member reimbursment) $' + 0 + '</br>';
-            s += '<div style="text-align:center;"><button id="hcPaymentProcessor" class="btn btn-default btn-round btn-sm" onclick="alert(\'Payment processor: call out to Shopify for $0.00\')">Payment Processor ($<b>' + 0 + ')</b></button></div>';
+            s += '&nbsp;&nbsp;&nbsp;$' + deducted.toFixed(2) + ' deducted (reimbursed to provider), copay $' + copay.toFixed(2) + '</br>';
+            s += 'Member to pay (copay + member reimbursment) $' + copay.toFixed(2) + '</br>';
+            s += '<div style="text-align:center;"><button id="hcPaymentProcessor" class="btn btn-default btn-round btn-sm" onclick="alert(\'Payment processor: call out to Shopify for $' + copay.toFixed(2) + '\')">Payment Processor ($<b>' + copay.toFixed(2) + ')</b></button></div>';
             document.getElementById('hcAdjudicateResponse').innerHTML = s;
         }
 
